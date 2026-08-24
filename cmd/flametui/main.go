@@ -9,7 +9,9 @@ import (
 	"github.com/major1201/flametui/pkg/tui"
 )
 
-var version = "1.0.0"
+// version is set at build time via ldflags:
+//   go build -ldflags "-X main.version=$(git describe --tags --always --dirty)"
+var version = "dev"
 
 func main() {
 	showVersion := flag.Bool("version", false, "Show version")
